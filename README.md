@@ -22,11 +22,11 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/etkinlik/php-sdk.git"
+      "url": "https://github.com/etkinlik/etkinlik-io-api.git"
     }
   ],
   "require": {
-    "etkinlik/php-sdk": "*@dev"
+    "etkinlik/etkinlik-io-api": "*@dev"
   }
 }
 ```
