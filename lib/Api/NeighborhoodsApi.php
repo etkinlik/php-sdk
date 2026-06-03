@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace EtkinlikIo\Api\Api;
+namespace EtkinlikIo\Api\EtkinlikIo\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -136,7 +136,7 @@ class NeighborhoodsApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \EtkinlikIo\Api\Model\Neighborhood[]|\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\Model\ApiNotFoundError
+     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\Neighborhood[]|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError
      */
     public function listDistrictNeighborhoods($id, string $contentType = self::contentTypes['listDistrictNeighborhoods'][0])
     {
@@ -154,7 +154,7 @@ class NeighborhoodsApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \EtkinlikIo\Api\Model\Neighborhood[]|\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\Model\ApiNotFoundError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EtkinlikIo\Api\EtkinlikIo\Api\Model\Neighborhood[]|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listDistrictNeighborhoodsWithHttpInfo($id, string $contentType = self::contentTypes['listDistrictNeighborhoods'][0])
     {
@@ -186,25 +186,25 @@ class NeighborhoodsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\Model\Neighborhood[]',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Neighborhood[]',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\Model\ApiGeneralError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\Model\ApiNotFoundError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError',
                         $request,
                         $response,
                     );
@@ -226,7 +226,7 @@ class NeighborhoodsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\EtkinlikIo\Api\Model\Neighborhood[]',
+                '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Neighborhood[]',
                 $request,
                 $response,
             );
@@ -235,7 +235,7 @@ class NeighborhoodsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\Model\Neighborhood[]',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Neighborhood[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -243,7 +243,7 @@ class NeighborhoodsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\Model\ApiGeneralError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -251,7 +251,7 @@ class NeighborhoodsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -259,7 +259,7 @@ class NeighborhoodsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\Model\ApiNotFoundError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -305,7 +305,7 @@ class NeighborhoodsApi
      */
     public function listDistrictNeighborhoodsAsyncWithHttpInfo($id, string $contentType = self::contentTypes['listDistrictNeighborhoods'][0])
     {
-        $returnType = '\EtkinlikIo\Api\Model\Neighborhood[]';
+        $returnType = '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Neighborhood[]';
         $request = $this->listDistrictNeighborhoodsRequest($id, $contentType);
 
         return $this->client

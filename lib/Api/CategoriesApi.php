@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace EtkinlikIo\Api\Api;
+namespace EtkinlikIo\Api\EtkinlikIo\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -135,7 +135,7 @@ class CategoriesApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \EtkinlikIo\Api\Model\Category[]|\EtkinlikIo\Api\Model\ApiAuthorizationError
+     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\Category[]|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError
      */
     public function listCategories(string $contentType = self::contentTypes['listCategories'][0])
     {
@@ -152,7 +152,7 @@ class CategoriesApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \EtkinlikIo\Api\Model\Category[]|\EtkinlikIo\Api\Model\ApiAuthorizationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EtkinlikIo\Api\EtkinlikIo\Api\Model\Category[]|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCategoriesWithHttpInfo(string $contentType = self::contentTypes['listCategories'][0])
     {
@@ -184,13 +184,13 @@ class CategoriesApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\Model\Category[]',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Category[]',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $request,
                         $response,
                     );
@@ -212,7 +212,7 @@ class CategoriesApi
             }
 
             return $this->handleResponseWithDataType(
-                '\EtkinlikIo\Api\Model\Category[]',
+                '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Category[]',
                 $request,
                 $response,
             );
@@ -221,7 +221,7 @@ class CategoriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\Model\Category[]',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Category[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -229,7 +229,7 @@ class CategoriesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -273,7 +273,7 @@ class CategoriesApi
      */
     public function listCategoriesAsyncWithHttpInfo(string $contentType = self::contentTypes['listCategories'][0])
     {
-        $returnType = '\EtkinlikIo\Api\Model\Category[]';
+        $returnType = '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Category[]';
         $request = $this->listCategoriesRequest($contentType);
 
         return $this->client

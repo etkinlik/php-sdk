@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  EtkinlikIo\Api\Model
+ * @package  EtkinlikIo\Api\EtkinlikIo\Api\Model
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,12 +27,12 @@
  * Do not edit the class manually.
  */
 
-namespace EtkinlikIo\Api\Model;
+namespace EtkinlikIo\Api\EtkinlikIo\Api\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package EtkinlikIo\Api\Model
+ * @package EtkinlikIo\Api\EtkinlikIo\Api\Model
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

@@ -13,7 +13,7 @@ All URIs are relative to https://etkinlik.io/api/v2, except if the operation def
 ## `getVenue()`
 
 ```php
-getVenue($id): \EtkinlikIo\Api\Model\Venue
+getVenue($id): \EtkinlikIo\Api\EtkinlikIo\Api\Model\Venue
 ```
 
 Venue detail
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\EtkinlikIo\Api\Model\Venue**](../Model/Venue.md)
+[**\EtkinlikIo\Api\EtkinlikIo\Api\Model\Venue**](../Model/Venue.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ try {
 ## `listVenues()`
 
 ```php
-listVenues($city_ids, $district_ids, $neighborhood_ids, $status_ids, $skip, $take): \EtkinlikIo\Api\Model\PaginatedVenues
+listVenues($city_ids, $district_ids, $neighborhood_ids, $status_ids, $skip, $take): \EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedVenues
 ```
 
 List venues
@@ -125,7 +125,7 @@ try {
 
 ### Return type
 
-[**\EtkinlikIo\Api\Model\PaginatedVenues**](../Model/PaginatedVenues.md)
+[**\EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedVenues**](../Model/PaginatedVenues.md)
 
 ### Authorization
 

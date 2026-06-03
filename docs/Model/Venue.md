@@ -15,9 +15,9 @@ Name | Type | Description | Notes
 **web_url** | **string** | Venue website URL. | [optional]
 **facebook_url** | **string** | Venue Facebook URL. | [optional]
 **twitter_url** | **string** | Venue Twitter URL. | [optional]
-**city** | [**\EtkinlikIo\Api\Model\City**](City.md) |  | [optional]
-**district** | [**\EtkinlikIo\Api\Model\District**](District.md) |  | [optional]
-**neighborhood** | [**\EtkinlikIo\Api\Model\Neighborhood**](Neighborhood.md) |  | [optional]
+**city** | [**\EtkinlikIo\Api\EtkinlikIo\Api\Model\City**](City.md) |  | [optional]
+**district** | [**\EtkinlikIo\Api\EtkinlikIo\Api\Model\District**](District.md) |  | [optional]
+**neighborhood** | [**\EtkinlikIo\Api\EtkinlikIo\Api\Model\Neighborhood**](Neighborhood.md) |  | [optional]
 **address** | **string** | Venue street address. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

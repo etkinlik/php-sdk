@@ -12,7 +12,7 @@ All URIs are relative to https://etkinlik.io/api/v2, except if the operation def
 ## `listDistrictNeighborhoods()`
 
 ```php
-listDistrictNeighborhoods($id): \EtkinlikIo\Api\Model\Neighborhood[]
+listDistrictNeighborhoods($id): \EtkinlikIo\Api\EtkinlikIo\Api\Model\Neighborhood[]
 ```
 
 List neighborhoods by district
@@ -54,7 +54,7 @@ try {
 
 ### Return type
 
-[**\EtkinlikIo\Api\Model\Neighborhood[]**](../Model/Neighborhood.md)
+[**\EtkinlikIo\Api\EtkinlikIo\Api\Model\Neighborhood[]**](../Model/Neighborhood.md)
 
 ### Authorization
 

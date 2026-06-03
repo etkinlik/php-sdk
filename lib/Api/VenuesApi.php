@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace EtkinlikIo\Api\Api;
+namespace EtkinlikIo\Api\EtkinlikIo\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -139,7 +139,7 @@ class VenuesApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \EtkinlikIo\Api\Model\Venue|\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\Model\ApiNotFoundError
+     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\Venue|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError
      */
     public function getVenue($id, string $contentType = self::contentTypes['getVenue'][0])
     {
@@ -157,7 +157,7 @@ class VenuesApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \EtkinlikIo\Api\Model\Venue|\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\Model\ApiNotFoundError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EtkinlikIo\Api\EtkinlikIo\Api\Model\Venue|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getVenueWithHttpInfo($id, string $contentType = self::contentTypes['getVenue'][0])
     {
@@ -189,25 +189,25 @@ class VenuesApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\Model\Venue',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Venue',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\Model\ApiGeneralError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\Model\ApiNotFoundError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError',
                         $request,
                         $response,
                     );
@@ -229,7 +229,7 @@ class VenuesApi
             }
 
             return $this->handleResponseWithDataType(
-                '\EtkinlikIo\Api\Model\Venue',
+                '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Venue',
                 $request,
                 $response,
             );
@@ -238,7 +238,7 @@ class VenuesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\Model\Venue',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Venue',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -246,7 +246,7 @@ class VenuesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\Model\ApiGeneralError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class VenuesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class VenuesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\Model\ApiNotFoundError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -308,7 +308,7 @@ class VenuesApi
      */
     public function getVenueAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getVenue'][0])
     {
-        $returnType = '\EtkinlikIo\Api\Model\Venue';
+        $returnType = '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Venue';
         $request = $this->getVenueRequest($id, $contentType);
 
         return $this->client
@@ -459,7 +459,7 @@ class VenuesApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \EtkinlikIo\Api\Model\PaginatedVenues|\EtkinlikIo\Api\Model\ApiAuthorizationError
+     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedVenues|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError
      */
     public function listVenues($city_ids = null, $district_ids = null, $neighborhood_ids = null, $status_ids = null, $skip = 0, $take = 50, string $contentType = self::contentTypes['listVenues'][0])
     {
@@ -482,7 +482,7 @@ class VenuesApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \EtkinlikIo\Api\Model\PaginatedVenues|\EtkinlikIo\Api\Model\ApiAuthorizationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedVenues|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listVenuesWithHttpInfo($city_ids = null, $district_ids = null, $neighborhood_ids = null, $status_ids = null, $skip = 0, $take = 50, string $contentType = self::contentTypes['listVenues'][0])
     {
@@ -514,13 +514,13 @@ class VenuesApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\Model\PaginatedVenues',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedVenues',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $request,
                         $response,
                     );
@@ -542,7 +542,7 @@ class VenuesApi
             }
 
             return $this->handleResponseWithDataType(
-                '\EtkinlikIo\Api\Model\PaginatedVenues',
+                '\EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedVenues',
                 $request,
                 $response,
             );
@@ -551,7 +551,7 @@ class VenuesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\Model\PaginatedVenues',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedVenues',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -559,7 +559,7 @@ class VenuesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -615,7 +615,7 @@ class VenuesApi
      */
     public function listVenuesAsyncWithHttpInfo($city_ids = null, $district_ids = null, $neighborhood_ids = null, $status_ids = null, $skip = 0, $take = 50, string $contentType = self::contentTypes['listVenues'][0])
     {
-        $returnType = '\EtkinlikIo\Api\Model\PaginatedVenues';
+        $returnType = '\EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedVenues';
         $request = $this->listVenuesRequest($city_ids, $district_ids, $neighborhood_ids, $status_ids, $skip, $take, $contentType);
 
         return $this->client

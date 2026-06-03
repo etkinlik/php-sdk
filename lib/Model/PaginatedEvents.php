@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace EtkinlikIo\Api\Model;
+namespace EtkinlikIo\Api\EtkinlikIo\Api\Model;
 
 use \ArrayAccess;
 use \EtkinlikIo\Api\ObjectSerializer;
@@ -59,8 +59,8 @@ class PaginatedEvents implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $openAPITypes = [
-        'meta' => '\EtkinlikIo\Api\Model\PaginationMeta',
-        'items' => '\EtkinlikIo\Api\Model\Event[]'
+        'meta' => '\EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginationMeta',
+        'items' => '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Event[]'
     ];
 
     /**
@@ -301,7 +301,7 @@ class PaginatedEvents implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets meta
      *
-     * @return \EtkinlikIo\Api\Model\PaginationMeta|null
+     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginationMeta|null
      */
     public function getMeta()
     {
@@ -311,7 +311,7 @@ class PaginatedEvents implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets meta
      *
-     * @param \EtkinlikIo\Api\Model\PaginationMeta|null $meta meta
+     * @param \EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginationMeta|null $meta meta
      *
      * @return self
      */
@@ -328,7 +328,7 @@ class PaginatedEvents implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets items
      *
-     * @return \EtkinlikIo\Api\Model\Event[]|null
+     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\Event[]|null
      */
     public function getItems()
     {
@@ -338,7 +338,7 @@ class PaginatedEvents implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets items
      *
-     * @param \EtkinlikIo\Api\Model\Event[]|null $items items
+     * @param \EtkinlikIo\Api\EtkinlikIo\Api\Model\Event[]|null $items items
      *
      * @return self
      */

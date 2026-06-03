@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace EtkinlikIo\Api\Api;
+namespace EtkinlikIo\Api\EtkinlikIo\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -135,7 +135,7 @@ class CitiesApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \EtkinlikIo\Api\Model\City[]|\EtkinlikIo\Api\Model\ApiAuthorizationError
+     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\City[]|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError
      */
     public function listCities(string $contentType = self::contentTypes['listCities'][0])
     {
@@ -152,7 +152,7 @@ class CitiesApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \EtkinlikIo\Api\Model\City[]|\EtkinlikIo\Api\Model\ApiAuthorizationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EtkinlikIo\Api\EtkinlikIo\Api\Model\City[]|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCitiesWithHttpInfo(string $contentType = self::contentTypes['listCities'][0])
     {
@@ -184,13 +184,13 @@ class CitiesApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\Model\City[]',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\City[]',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $request,
                         $response,
                     );
@@ -212,7 +212,7 @@ class CitiesApi
             }
 
             return $this->handleResponseWithDataType(
-                '\EtkinlikIo\Api\Model\City[]',
+                '\EtkinlikIo\Api\EtkinlikIo\Api\Model\City[]',
                 $request,
                 $response,
             );
@@ -221,7 +221,7 @@ class CitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\Model\City[]',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\City[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -229,7 +229,7 @@ class CitiesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -273,7 +273,7 @@ class CitiesApi
      */
     public function listCitiesAsyncWithHttpInfo(string $contentType = self::contentTypes['listCities'][0])
     {
-        $returnType = '\EtkinlikIo\Api\Model\City[]';
+        $returnType = '\EtkinlikIo\Api\EtkinlikIo\Api\Model\City[]';
         $request = $this->listCitiesRequest($contentType);
 
         return $this->client

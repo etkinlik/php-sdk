@@ -12,7 +12,7 @@ All URIs are relative to https://etkinlik.io/api/v2, except if the operation def
 ## `listCategories()`
 
 ```php
-listCategories(): \EtkinlikIo\Api\Model\Category[]
+listCategories(): \EtkinlikIo\Api\EtkinlikIo\Api\Model\Category[]
 ```
 
 List categories
@@ -51,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\EtkinlikIo\Api\Model\Category[]**](../Model/Category.md)
+[**\EtkinlikIo\Api\EtkinlikIo\Api\Model\Category[]**](../Model/Category.md)
 
 ### Authorization
 

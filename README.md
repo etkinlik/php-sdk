@@ -15,11 +15,24 @@ PHP 8.1 and later.
 
 ### Composer
 
-Install from [Packagist](https://packagist.org/packages/etkinlik/php-sdk):
+To install the bindings via [Composer](https://getcomposer.org/), add the following to `composer.json`:
 
-```bash
-composer require etkinlik/php-sdk:^2.0.5
+```json
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+    }
+  ],
+  "require": {
+    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+  }
+}
 ```
+
+Then run `composer install`
+
 ### Manual Installation
 
 Download the files and include `autoload.php`:

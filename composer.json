@@ -1,5 +1,5 @@
 {
-    "name": "etkinlik/php-sdk",
+    "name": "etkinlik/etkinlik-io-api",
     "description": "API for integrating with event content aggregated and categorized from many sources and organizers. Use this documentation to build applications on top of Etkinlik.io event data.",
     "keywords": [
         "openapitools",
@@ -10,12 +10,12 @@
         "rest",
         "api"
     ],
-    "homepage": "https://etkinlik.io/api-bilgi",
-    "license": "MIT",
+    "homepage": "https://openapi-generator.tech",
+    "license": "unlicense",
     "authors": [
         {
-            "name": "Etkinlik.io",
-            "homepage": "https://etkinlik.io/api-bilgi"
+            "name": "OpenAPI",
+            "homepage": "https://openapi-generator.tech"
         }
     ],
     "require": {
