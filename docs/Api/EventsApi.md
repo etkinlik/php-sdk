@@ -14,7 +14,7 @@ All URIs are relative to https://etkinlik.io/api/v2, except if the operation def
 ## `getEvent()`
 
 ```php
-getEvent($id): \EtkinlikIo\Api\EtkinlikIo\Api\Model\Event
+getEvent($id): \EtkinlikIo\Api\Model\Event
 ```
 
 Event detail
@@ -56,7 +56,7 @@ try {
 
 ### Return type
 
-[**\EtkinlikIo\Api\EtkinlikIo\Api\Model\Event**](../Model/Event.md)
+[**\EtkinlikIo\Api\Model\Event**](../Model/Event.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ try {
 ## `listEvents()`
 
 ```php
-listEvents($format_ids, $category_ids, $venue_ids, $city_ids, $start_gte, $end_lte, $sort_by, $skip, $take): \EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedEvents
+listEvents($format_ids, $category_ids, $venue_ids, $city_ids, $start_gte, $end_lte, $sort_by, $skip, $take): \EtkinlikIo\Api\Model\PaginatedEvents
 ```
 
 List events
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedEvents**](../Model/PaginatedEvents.md)
+[**\EtkinlikIo\Api\Model\PaginatedEvents**](../Model/PaginatedEvents.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ try {
 ## `recordEventImpression()`
 
 ```php
-recordEventImpression($id, $event_impression_request): \EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionCreated
+recordEventImpression($id, $event_impression_request): \EtkinlikIo\Api\Model\EventImpressionCreated
 ```
 
 Record event impression
@@ -175,7 +175,7 @@ $apiInstance = new EtkinlikIo\Api\Api\EventsApi(
     $config
 );
 $id = 56; // int | Event ID.
-$event_impression_request = new \EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionRequest(); // \EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionRequest
+$event_impression_request = new \EtkinlikIo\Api\Model\EventImpressionRequest(); // \EtkinlikIo\Api\Model\EventImpressionRequest
 
 try {
     $result = $apiInstance->recordEventImpression($id, $event_impression_request);
@@ -190,11 +190,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Event ID. | |
-| **event_impression_request** | [**\EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionRequest**](../Model/EventImpressionRequest.md)|  | [optional] |
+| **event_impression_request** | [**\EtkinlikIo\Api\Model\EventImpressionRequest**](../Model/EventImpressionRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionCreated**](../Model/EventImpressionCreated.md)
+[**\EtkinlikIo\Api\Model\EventImpressionCreated**](../Model/EventImpressionCreated.md)
 
 ### Authorization
 

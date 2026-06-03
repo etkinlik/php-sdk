@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace EtkinlikIo\Api\EtkinlikIo\Api\Model;
+namespace EtkinlikIo\Api\Model;
 
 use \ArrayAccess;
 use \EtkinlikIo\Api\ObjectSerializer;
@@ -70,9 +70,9 @@ class Venue implements ModelInterface, ArrayAccess, \JsonSerializable
         'web_url' => 'string',
         'facebook_url' => 'string',
         'twitter_url' => 'string',
-        'city' => '\EtkinlikIo\Api\EtkinlikIo\Api\Model\City',
-        'district' => '\EtkinlikIo\Api\EtkinlikIo\Api\Model\District',
-        'neighborhood' => '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Neighborhood',
+        'city' => '\EtkinlikIo\Api\Model\City',
+        'district' => '\EtkinlikIo\Api\Model\District',
+        'neighborhood' => '\EtkinlikIo\Api\Model\Neighborhood',
         'address' => 'string'
     ];
 
@@ -689,7 +689,7 @@ class Venue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets city
      *
-     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\City|null
+     * @return \EtkinlikIo\Api\Model\City|null
      */
     public function getCity()
     {
@@ -699,7 +699,7 @@ class Venue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets city
      *
-     * @param \EtkinlikIo\Api\EtkinlikIo\Api\Model\City|null $city city
+     * @param \EtkinlikIo\Api\Model\City|null $city city
      *
      * @return self
      */
@@ -716,7 +716,7 @@ class Venue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets district
      *
-     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\District|null
+     * @return \EtkinlikIo\Api\Model\District|null
      */
     public function getDistrict()
     {
@@ -726,7 +726,7 @@ class Venue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets district
      *
-     * @param \EtkinlikIo\Api\EtkinlikIo\Api\Model\District|null $district district
+     * @param \EtkinlikIo\Api\Model\District|null $district district
      *
      * @return self
      */
@@ -743,7 +743,7 @@ class Venue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets neighborhood
      *
-     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\Neighborhood|null
+     * @return \EtkinlikIo\Api\Model\Neighborhood|null
      */
     public function getNeighborhood()
     {
@@ -753,7 +753,7 @@ class Venue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets neighborhood
      *
-     * @param \EtkinlikIo\Api\EtkinlikIo\Api\Model\Neighborhood|null $neighborhood neighborhood
+     * @param \EtkinlikIo\Api\Model\Neighborhood|null $neighborhood neighborhood
      *
      * @return self
      */

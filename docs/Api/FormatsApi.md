@@ -12,7 +12,7 @@ All URIs are relative to https://etkinlik.io/api/v2, except if the operation def
 ## `listFormats()`
 
 ```php
-listFormats(): \EtkinlikIo\Api\EtkinlikIo\Api\Model\Format[]
+listFormats(): \EtkinlikIo\Api\Model\Format[]
 ```
 
 List formats
@@ -51,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\EtkinlikIo\Api\EtkinlikIo\Api\Model\Format[]**](../Model/Format.md)
+[**\EtkinlikIo\Api\Model\Format[]**](../Model/Format.md)
 
 ### Authorization
 

@@ -30,7 +30,7 @@
 namespace EtkinlikIo\Api;
 
 use GuzzleHttp\Psr7\Utils;
-use EtkinlikIo\Api\EtkinlikIo\Api\Model\ModelInterface;
+use EtkinlikIo\Api\Model\ModelInterface;
 
 /**
  * ObjectSerializer Class Doc Comment

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace EtkinlikIo\Api\EtkinlikIo\Api\Api;
+namespace EtkinlikIo\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -142,7 +142,7 @@ class EventsApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\Event|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiDuplicateRecordError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiDeletedError
+     * @return \EtkinlikIo\Api\Model\Event|\EtkinlikIo\Api\Model\ApiDuplicateRecordError|\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\Model\ApiNotFoundError|\EtkinlikIo\Api\Model\ApiDeletedError
      */
     public function getEvent($id, string $contentType = self::contentTypes['getEvent'][0])
     {
@@ -160,7 +160,7 @@ class EventsApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \EtkinlikIo\Api\EtkinlikIo\Api\Model\Event|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiDuplicateRecordError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiDeletedError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EtkinlikIo\Api\Model\Event|\EtkinlikIo\Api\Model\ApiDuplicateRecordError|\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\Model\ApiNotFoundError|\EtkinlikIo\Api\Model\ApiDeletedError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventWithHttpInfo($id, string $contentType = self::contentTypes['getEvent'][0])
     {
@@ -192,37 +192,37 @@ class EventsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Event',
+                        '\EtkinlikIo\Api\Model\Event',
                         $request,
                         $response,
                     );
                 case 301:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiDuplicateRecordError',
+                        '\EtkinlikIo\Api\Model\ApiDuplicateRecordError',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError',
+                        '\EtkinlikIo\Api\Model\ApiGeneralError',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError',
+                        '\EtkinlikIo\Api\Model\ApiNotFoundError',
                         $request,
                         $response,
                     );
                 case 410:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiDeletedError',
+                        '\EtkinlikIo\Api\Model\ApiDeletedError',
                         $request,
                         $response,
                     );
@@ -244,7 +244,7 @@ class EventsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Event',
+                '\EtkinlikIo\Api\Model\Event',
                 $request,
                 $response,
             );
@@ -253,7 +253,7 @@ class EventsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Event',
+                        '\EtkinlikIo\Api\Model\Event',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -261,7 +261,7 @@ class EventsApi
                 case 301:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiDuplicateRecordError',
+                        '\EtkinlikIo\Api\Model\ApiDuplicateRecordError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -269,7 +269,7 @@ class EventsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError',
+                        '\EtkinlikIo\Api\Model\ApiGeneralError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -277,7 +277,7 @@ class EventsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -285,7 +285,7 @@ class EventsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError',
+                        '\EtkinlikIo\Api\Model\ApiNotFoundError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -293,7 +293,7 @@ class EventsApi
                 case 410:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiDeletedError',
+                        '\EtkinlikIo\Api\Model\ApiDeletedError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -339,7 +339,7 @@ class EventsApi
      */
     public function getEventAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getEvent'][0])
     {
-        $returnType = '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Event';
+        $returnType = '\EtkinlikIo\Api\Model\Event';
         $request = $this->getEventRequest($id, $contentType);
 
         return $this->client
@@ -493,7 +493,7 @@ class EventsApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedEvents|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError
+     * @return \EtkinlikIo\Api\Model\PaginatedEvents|\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\Model\ApiAuthorizationError
      */
     public function listEvents($format_ids = null, $category_ids = null, $venue_ids = null, $city_ids = null, $start_gte = null, $end_lte = null, $sort_by = 'upcoming', $skip = 0, $take = 50, string $contentType = self::contentTypes['listEvents'][0])
     {
@@ -519,7 +519,7 @@ class EventsApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedEvents|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EtkinlikIo\Api\Model\PaginatedEvents|\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\Model\ApiAuthorizationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listEventsWithHttpInfo($format_ids = null, $category_ids = null, $venue_ids = null, $city_ids = null, $start_gte = null, $end_lte = null, $sort_by = 'upcoming', $skip = 0, $take = 50, string $contentType = self::contentTypes['listEvents'][0])
     {
@@ -551,19 +551,19 @@ class EventsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedEvents',
+                        '\EtkinlikIo\Api\Model\PaginatedEvents',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError',
+                        '\EtkinlikIo\Api\Model\ApiGeneralError',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $request,
                         $response,
                     );
@@ -585,7 +585,7 @@ class EventsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedEvents',
+                '\EtkinlikIo\Api\Model\PaginatedEvents',
                 $request,
                 $response,
             );
@@ -594,7 +594,7 @@ class EventsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedEvents',
+                        '\EtkinlikIo\Api\Model\PaginatedEvents',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -602,7 +602,7 @@ class EventsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError',
+                        '\EtkinlikIo\Api\Model\ApiGeneralError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -610,7 +610,7 @@ class EventsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -672,7 +672,7 @@ class EventsApi
      */
     public function listEventsAsyncWithHttpInfo($format_ids = null, $category_ids = null, $venue_ids = null, $city_ids = null, $start_gte = null, $end_lte = null, $sort_by = 'upcoming', $skip = 0, $take = 50, string $contentType = self::contentTypes['listEvents'][0])
     {
-        $returnType = '\EtkinlikIo\Api\EtkinlikIo\Api\Model\PaginatedEvents';
+        $returnType = '\EtkinlikIo\Api\Model\PaginatedEvents';
         $request = $this->listEventsRequest($format_ids, $category_ids, $venue_ids, $city_ids, $start_gte, $end_lte, $sort_by, $skip, $take, $contentType);
 
         return $this->client
@@ -906,12 +906,12 @@ class EventsApi
      * Record event impression
      *
      * @param  int $id Event ID. (required)
-     * @param  \EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionRequest|null $event_impression_request event_impression_request (optional)
+     * @param  \EtkinlikIo\Api\Model\EventImpressionRequest|null $event_impression_request event_impression_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['recordEventImpression'] to see the possible values for this operation
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionCreated|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError
+     * @return \EtkinlikIo\Api\Model\EventImpressionCreated|\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\Model\ApiNotFoundError
      */
     public function recordEventImpression($id, $event_impression_request = null, string $contentType = self::contentTypes['recordEventImpression'][0])
     {
@@ -925,12 +925,12 @@ class EventsApi
      * Record event impression
      *
      * @param  int $id Event ID. (required)
-     * @param  \EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionRequest|null $event_impression_request (optional)
+     * @param  \EtkinlikIo\Api\Model\EventImpressionRequest|null $event_impression_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['recordEventImpression'] to see the possible values for this operation
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionCreated|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EtkinlikIo\Api\Model\EventImpressionCreated|\EtkinlikIo\Api\Model\ApiGeneralError|\EtkinlikIo\Api\Model\ApiAuthorizationError|\EtkinlikIo\Api\Model\ApiNotFoundError, HTTP status code, HTTP response headers (array of strings)
      */
     public function recordEventImpressionWithHttpInfo($id, $event_impression_request = null, string $contentType = self::contentTypes['recordEventImpression'][0])
     {
@@ -962,25 +962,25 @@ class EventsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionCreated',
+                        '\EtkinlikIo\Api\Model\EventImpressionCreated',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError',
+                        '\EtkinlikIo\Api\Model\ApiGeneralError',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError',
+                        '\EtkinlikIo\Api\Model\ApiNotFoundError',
                         $request,
                         $response,
                     );
@@ -1002,7 +1002,7 @@ class EventsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionCreated',
+                '\EtkinlikIo\Api\Model\EventImpressionCreated',
                 $request,
                 $response,
             );
@@ -1011,7 +1011,7 @@ class EventsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionCreated',
+                        '\EtkinlikIo\Api\Model\EventImpressionCreated',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1019,7 +1019,7 @@ class EventsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiGeneralError',
+                        '\EtkinlikIo\Api\Model\ApiGeneralError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1027,7 +1027,7 @@ class EventsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1035,7 +1035,7 @@ class EventsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiNotFoundError',
+                        '\EtkinlikIo\Api\Model\ApiNotFoundError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1053,7 +1053,7 @@ class EventsApi
      * Record event impression
      *
      * @param  int $id Event ID. (required)
-     * @param  \EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionRequest|null $event_impression_request (optional)
+     * @param  \EtkinlikIo\Api\Model\EventImpressionRequest|null $event_impression_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['recordEventImpression'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1075,7 +1075,7 @@ class EventsApi
      * Record event impression
      *
      * @param  int $id Event ID. (required)
-     * @param  \EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionRequest|null $event_impression_request (optional)
+     * @param  \EtkinlikIo\Api\Model\EventImpressionRequest|null $event_impression_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['recordEventImpression'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1083,7 +1083,7 @@ class EventsApi
      */
     public function recordEventImpressionAsyncWithHttpInfo($id, $event_impression_request = null, string $contentType = self::contentTypes['recordEventImpression'][0])
     {
-        $returnType = '\EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionCreated';
+        $returnType = '\EtkinlikIo\Api\Model\EventImpressionCreated';
         $request = $this->recordEventImpressionRequest($id, $event_impression_request, $contentType);
 
         return $this->client
@@ -1126,7 +1126,7 @@ class EventsApi
      * Create request for operation 'recordEventImpression'
      *
      * @param  int $id Event ID. (required)
-     * @param  \EtkinlikIo\Api\EtkinlikIo\Api\Model\EventImpressionRequest|null $event_impression_request (optional)
+     * @param  \EtkinlikIo\Api\Model\EventImpressionRequest|null $event_impression_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['recordEventImpression'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

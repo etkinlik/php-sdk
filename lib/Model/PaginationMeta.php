@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace EtkinlikIo\Api\EtkinlikIo\Api\Model;
+namespace EtkinlikIo\Api\Model;
 
 use \ArrayAccess;
 use \EtkinlikIo\Api\ObjectSerializer;

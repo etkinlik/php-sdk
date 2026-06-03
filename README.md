@@ -15,24 +15,11 @@ PHP 8.1 and later.
 
 ### Composer
 
-To install the bindings via [Composer](https://getcomposer.org/), add the following to `composer.json`:
+Install from [Packagist](https://packagist.org/packages/etkinlik/etkinlik-io-api):
 
-```json
-{
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
-    }
-  ],
-  "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
-  }
-}
+```bash
+composer require etkinlik/etkinlik-io-api:^2.0.5
 ```
-
-Then run `composer install`
-
 ### Manual Installation
 
 Download the files and include `autoload.php`:

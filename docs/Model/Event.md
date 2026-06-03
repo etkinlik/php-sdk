@@ -23,10 +23,10 @@ Name | Type | Description | Notes
 **live_url** | **string** | Live stream URL for the event. | [optional]
 **android_url** | **string** | Android app URL for the event. | [optional]
 **ios_url** | **string** | iOS app URL for the event. | [optional]
-**format** | [**\EtkinlikIo\Api\EtkinlikIo\Api\Model\Format**](Format.md) |  | [optional]
-**category** | [**\EtkinlikIo\Api\EtkinlikIo\Api\Model\Category**](Category.md) |  | [optional]
+**format** | [**\EtkinlikIo\Api\Model\Format**](Format.md) |  | [optional]
+**category** | [**\EtkinlikIo\Api\Model\Category**](Category.md) |  | [optional]
 **venue_type** | **string** | Venue type. - VENUE: Registered venue (&#x60;venue_data&#x60; is a Venue object) - ONLINE: Online event (&#x60;venue_data&#x60; is null) - MANUAL: Manually entered venue (&#x60;venue_data&#x60; is a VenueManual object) | [optional]
-**venue_data** | [**\EtkinlikIo\Api\EtkinlikIo\Api\Model\EventVenueData**](EventVenueData.md) |  | [optional]
-**tags** | [**\EtkinlikIo\Api\EtkinlikIo\Api\Model\Tag[]**](Tag.md) | Tags associated with the event. | [optional]
+**venue_data** | [**\EtkinlikIo\Api\Model\EventVenueData**](EventVenueData.md) |  | [optional]
+**tags** | [**\EtkinlikIo\Api\Model\Tag[]**](Tag.md) | Tags associated with the event. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

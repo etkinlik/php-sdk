@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace EtkinlikIo\Api\EtkinlikIo\Api\Api;
+namespace EtkinlikIo\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -135,7 +135,7 @@ class FormatsApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\Format[]|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError
+     * @return \EtkinlikIo\Api\Model\Format[]|\EtkinlikIo\Api\Model\ApiAuthorizationError
      */
     public function listFormats(string $contentType = self::contentTypes['listFormats'][0])
     {
@@ -152,7 +152,7 @@ class FormatsApi
      *
      * @throws \EtkinlikIo\Api\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \EtkinlikIo\Api\EtkinlikIo\Api\Model\Format[]|\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EtkinlikIo\Api\Model\Format[]|\EtkinlikIo\Api\Model\ApiAuthorizationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listFormatsWithHttpInfo(string $contentType = self::contentTypes['listFormats'][0])
     {
@@ -184,13 +184,13 @@ class FormatsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Format[]',
+                        '\EtkinlikIo\Api\Model\Format[]',
                         $request,
                         $response,
                     );
                 case 401:
                     return $this->handleResponseWithDataType(
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $request,
                         $response,
                     );
@@ -212,7 +212,7 @@ class FormatsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Format[]',
+                '\EtkinlikIo\Api\Model\Format[]',
                 $request,
                 $response,
             );
@@ -221,7 +221,7 @@ class FormatsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Format[]',
+                        '\EtkinlikIo\Api\Model\Format[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -229,7 +229,7 @@ class FormatsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EtkinlikIo\Api\EtkinlikIo\Api\Model\ApiAuthorizationError',
+                        '\EtkinlikIo\Api\Model\ApiAuthorizationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -273,7 +273,7 @@ class FormatsApi
      */
     public function listFormatsAsyncWithHttpInfo(string $contentType = self::contentTypes['listFormats'][0])
     {
-        $returnType = '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Format[]';
+        $returnType = '\EtkinlikIo\Api\Model\Format[]';
         $request = $this->listFormatsRequest($contentType);
 
         return $this->client
