@@ -10,16 +10,16 @@
         "rest",
         "api"
     ],
-    "homepage": "https://etkinlik.io/api-bilgi",
-    "license": "MIT",
+    "homepage": "https://openapi-generator.tech",
+    "license": "unlicense",
     "authors": [
         {
-            "name": "Etkinlik.io",
-            "email": "bilgi@etkinlik.io"
+            "name": "OpenAPI",
+            "homepage": "https://openapi-generator.tech"
         }
     ],
     "require": {
-        "php": "^8.2",
+        "php": "^8.1",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
@@ -31,18 +31,9 @@
         "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": {
-            "EtkinlikIo\\Api\\": "lib/"
-        }
+        "psr-4": { "EtkinlikIo\\Api\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": {
-            "EtkinlikIo\\Api\\Test\\": "test/"
-        }
-    },
-    "type": "library",
-    "support": {
-        "issues": "https://github.com/etkinlik/php-sdk/issues",
-        "source": "https://github.com/etkinlik/php-sdk"
+        "psr-4": { "EtkinlikIo\\Api\\Test\\" : "test/" }
     }
 }
