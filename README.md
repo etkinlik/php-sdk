@@ -15,10 +15,10 @@ PHP 8.1 and later.
 
 ### Composer
 
-Install from [Packagist](https://packagist.org/packages/etkinlik/etkinlik-io-api):
+Install from [Packagist](https://packagist.org/packages/etkinlik/php-sdk):
 
 ```bash
-composer require etkinlik/etkinlik-io-api:^2.0.5
+composer require etkinlik/php-sdk:^2.0.5
 ```
 ### Manual Installation
 
