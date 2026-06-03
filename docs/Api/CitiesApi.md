@@ -12,7 +12,7 @@ All URIs are relative to https://etkinlik.io/api/v2, except if the operation def
 ## `listCities()`
 
 ```php
-listCities(): \EtkinlikIo\Api\EtkinlikIo\Api\Model\City[]
+listCities(): \EtkinlikIo\Api\Model\City[]
 ```
 
 List cities
@@ -51,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\EtkinlikIo\Api\EtkinlikIo\Api\Model\City[]**](../Model/City.md)
+[**\EtkinlikIo\Api\Model\City[]**](../Model/City.md)
 
 ### Authorization
 

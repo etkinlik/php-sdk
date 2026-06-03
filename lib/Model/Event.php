@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace EtkinlikIo\Api\EtkinlikIo\Api\Model;
+namespace EtkinlikIo\Api\Model;
 
 use \ArrayAccess;
 use \EtkinlikIo\Api\ObjectSerializer;
@@ -77,11 +77,11 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
         'live_url' => 'string',
         'android_url' => 'string',
         'ios_url' => 'string',
-        'format' => '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Format',
-        'category' => '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Category',
+        'format' => '\EtkinlikIo\Api\Model\Format',
+        'category' => '\EtkinlikIo\Api\Model\Category',
         'venue_type' => 'string',
-        'venue_data' => '\EtkinlikIo\Api\EtkinlikIo\Api\Model\EventVenueData',
-        'tags' => '\EtkinlikIo\Api\EtkinlikIo\Api\Model\Tag[]'
+        'venue_data' => '\EtkinlikIo\Api\Model\EventVenueData',
+        'tags' => '\EtkinlikIo\Api\Model\Tag[]'
     ];
 
     /**
@@ -993,7 +993,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets format
      *
-     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\Format|null
+     * @return \EtkinlikIo\Api\Model\Format|null
      */
     public function getFormat()
     {
@@ -1003,7 +1003,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets format
      *
-     * @param \EtkinlikIo\Api\EtkinlikIo\Api\Model\Format|null $format format
+     * @param \EtkinlikIo\Api\Model\Format|null $format format
      *
      * @return self
      */
@@ -1020,7 +1020,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets category
      *
-     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\Category|null
+     * @return \EtkinlikIo\Api\Model\Category|null
      */
     public function getCategory()
     {
@@ -1030,7 +1030,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets category
      *
-     * @param \EtkinlikIo\Api\EtkinlikIo\Api\Model\Category|null $category category
+     * @param \EtkinlikIo\Api\Model\Category|null $category category
      *
      * @return self
      */
@@ -1084,7 +1084,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets venue_data
      *
-     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\EventVenueData|null
+     * @return \EtkinlikIo\Api\Model\EventVenueData|null
      */
     public function getVenueData()
     {
@@ -1094,7 +1094,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets venue_data
      *
-     * @param \EtkinlikIo\Api\EtkinlikIo\Api\Model\EventVenueData|null $venue_data venue_data
+     * @param \EtkinlikIo\Api\Model\EventVenueData|null $venue_data venue_data
      *
      * @return self
      */
@@ -1118,7 +1118,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tags
      *
-     * @return \EtkinlikIo\Api\EtkinlikIo\Api\Model\Tag[]|null
+     * @return \EtkinlikIo\Api\Model\Tag[]|null
      */
     public function getTags()
     {
@@ -1128,7 +1128,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tags
      *
-     * @param \EtkinlikIo\Api\EtkinlikIo\Api\Model\Tag[]|null $tags Tags associated with the event.
+     * @param \EtkinlikIo\Api\Model\Tag[]|null $tags Tags associated with the event.
      *
      * @return self
      */
