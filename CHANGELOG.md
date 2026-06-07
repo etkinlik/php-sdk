@@ -1,3 +1,8 @@
+## 2.0.10
+
+- Regenerated from OpenAPI 2.0.10.
+- OpenAPI schemas: `required` arrays added for response models (Event, Venue, pagination, errors, etc.). Nullable optional fields marked explicitly. Wire format unchanged.
+
 ## 2.0.9
 
 - Regenerated from OpenAPI 2.0.9.
