@@ -1,3 +1,8 @@
+## 2.0.7
+
+- Regenerated from OpenAPI 2.0.7. API surface unchanged from 2.0.6; use v2.0.7 on Packagist (v2.0.6 could not be re-tagged after publish).
+- See 2.0.6 release notes below for event time field changes.
+
 ## 2.0.6
 
 - Regenerated from OpenAPI 2.0.6.
