@@ -1,3 +1,9 @@
+## 2.0.9
+
+- Regenerated from OpenAPI 2.0.9.
+- Event resource: `start`, `end`, and `venue` marked **deprecated** in the API contract. Fields remain in JSON responses for backward compatibility.
+- New integrations: use `start_r001`, `end_r001`, `timezone`, and `venue_type` / `venue_data` instead.
+
 ## 2.0.8
 
 - Regenerated from OpenAPI 2.0.8. API surface unchanged from 2.0.7.
