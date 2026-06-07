@@ -1,3 +1,8 @@
+## 2.0.8
+
+- Regenerated from OpenAPI 2.0.8. API surface unchanged from 2.0.7.
+- New release tag; same immutable-version policy as 2.0.6 → 2.0.7.
+
 ## 2.0.7
 
 - Regenerated from OpenAPI 2.0.7. API surface unchanged from 2.0.6; use v2.0.7 on Packagist (v2.0.6 could not be re-tagged after publish).
