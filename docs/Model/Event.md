@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **start_r001** | **\DateTime** | Event start instant in UTC (ISO8601). Prefer with &#x60;end_r001&#x60; and &#x60;timezone&#x60; for new integrations. |
 **end** | **\DateTime** | **Deprecated.** Legacy event end in ISO8601 with offset for the event&#39;s &#x60;timezone&#x60;. Still returned for backward compatibility. When the event has no scheduled end (&#x60;end_r001&#x60; is null), this value is local &#x60;start&#x60; plus 2 hours. New integrations must use &#x60;end_r001&#x60; with &#x60;timezone&#x60;. |
 **end_r001** | **\DateTime** | Actual scheduled end instant in UTC (ISO8601) when available; null when the event has no end time. Prefer with &#x60;start_r001&#x60; for new integrations. | [optional]
+**modified_at** | **\DateTime** | Last content or source-data update instant in UTC (ISO8601). Use with &#x60;sort_by&#x3D;updated&#x60; to list recently changed events. |
 **timezone** | **string** | IANA timezone identifier for the event (e.g. &#x60;Europe/Istanbul&#x60;). Always present and valid. Use with &#x60;start_r001&#x60; / &#x60;end_r001&#x60; for display in local wall-clock time. |
 **is_free** | **bool** | &#x60;true&#x60; if the event is free, otherwise &#x60;false&#x60;. |
 **poster_url** | **string** | Event poster image URL. |

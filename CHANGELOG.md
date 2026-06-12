@@ -1,3 +1,8 @@
+## 2.0.11
+
+- Regenerated from OpenAPI 2.0.11.
+- Event resource: added `modified_at` (UTC ISO8601). `GET /events` supports `sort_by=updated`.
+
 ## 2.0.10
 
 - Regenerated from OpenAPI 2.0.10.

@@ -104,7 +104,7 @@ $venue_ids = 'venue_ids_example'; // string | Filter events by venue IDs. Use co
 $city_ids = 'city_ids_example'; // string | Filter records by city IDs. Use comma-separated values for multiple IDs.
 $start_gte = 'start_gte_example'; // string | Filter events by start time (greater than or equal). Valid datetime, e.g. YYYY-MM-DD HH:mm:ss.
 $end_lte = 'end_lte_example'; // string | Filter events by end time (less than or equal). Valid datetime, e.g. YYYY-MM-DD HH:mm:ss.
-$sort_by = 'upcoming'; // string | Sort order (case-insensitive). `upcoming`: upcoming events by start time ascending (default). `recent`: most recently added approved events.
+$sort_by = 'upcoming'; // string | Sort order (case-insensitive). `upcoming`: upcoming events by start time ascending (default). `recent`: most recently approved (catalog additions). `updated`: most recently updated content or source data (`modified_at` desc).
 $skip = 0; // int | Offset for pagination.
 $take = 50; // int | Maximum number of results to return.
 
@@ -126,7 +126,7 @@ try {
 | **city_ids** | **string**| Filter records by city IDs. Use comma-separated values for multiple IDs. | [optional] |
 | **start_gte** | **string**| Filter events by start time (greater than or equal). Valid datetime, e.g. YYYY-MM-DD HH:mm:ss. | [optional] |
 | **end_lte** | **string**| Filter events by end time (less than or equal). Valid datetime, e.g. YYYY-MM-DD HH:mm:ss. | [optional] |
-| **sort_by** | **string**| Sort order (case-insensitive). &#x60;upcoming&#x60;: upcoming events by start time ascending (default). &#x60;recent&#x60;: most recently added approved events. | [optional] [default to &#39;upcoming&#39;] |
+| **sort_by** | **string**| Sort order (case-insensitive). &#x60;upcoming&#x60;: upcoming events by start time ascending (default). &#x60;recent&#x60;: most recently approved (catalog additions). &#x60;updated&#x60;: most recently updated content or source data (&#x60;modified_at&#x60; desc). | [optional] [default to &#39;upcoming&#39;] |
 | **skip** | **int**| Offset for pagination. | [optional] [default to 0] |
 | **take** | **int**| Maximum number of results to return. | [optional] [default to 50] |
 
