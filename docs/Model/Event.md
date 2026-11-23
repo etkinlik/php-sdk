@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **int** | Event ID. |
 **name** | **string** | Event name. |
 **slug** | **string** | Event slug. |
-**url** | **string** | Event URL on Etkinlik.io. |
+**url** | **string** | Event page on Etkinlik.io. Includes &#x60;publisher_code&#x60; for the authenticated publisher so the page can remember that publisher for 30 days. This value is the publisher code, not the API token. |
 **content** | **string** | Event HTML content with detailed information. |
 **start** | **\DateTime** | **Deprecated.** Legacy event start in ISO8601 with offset for the event&#39;s &#x60;timezone&#x60; (wall-clock presentation). Still returned for backward compatibility. New integrations must use &#x60;start_r001&#x60; with &#x60;timezone&#x60;. |
 **start_r001** | **\DateTime** | Event start instant in UTC (ISO8601). Prefer with &#x60;end_r001&#x60; and &#x60;timezone&#x60; for new integrations. |
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **timezone** | **string** | IANA timezone identifier for the event (e.g. &#x60;Europe/Istanbul&#x60;). Always present and valid. Use with &#x60;start_r001&#x60; / &#x60;end_r001&#x60; for display in local wall-clock time. |
 **is_free** | **bool** | &#x60;true&#x60; if the event is free, otherwise &#x60;false&#x60;. |
 **poster_url** | **string** | Event poster image URL. |
-**ticket_url** | **string** | Ticket URL when available; otherwise redirects to the event page. |
+**ticket_url** | **string** | Direct ticket URL. Includes &#x60;publisher_code&#x60; (not the API token). When a ticket partner URL is missing, the redirect falls back to the event page. |
 **phone** | **string** | Contact phone for the event; null when not set. | [optional]
 **email** | **string** | Contact email for the event; null when not set. | [optional]
 **facebook_url** | **string** | Facebook profile or page for the event; null when not set. | [optional]

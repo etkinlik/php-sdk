@@ -657,7 +657,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets url
      *
-     * @param string $url Event URL on Etkinlik.io.
+     * @param string $url Event page on Etkinlik.io. Includes `publisher_code` for the authenticated publisher so the page can remember that publisher for 30 days. This value is the publisher code, not the API token.
      *
      * @return self
      */
@@ -938,7 +938,7 @@ class Event implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets ticket_url
      *
-     * @param string $ticket_url Ticket URL when available; otherwise redirects to the event page.
+     * @param string $ticket_url Direct ticket URL. Includes `publisher_code` (not the API token). When a ticket partner URL is missing, the redirect falls back to the event page.
      *
      * @return self
      */
