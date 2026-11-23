@@ -1,7 +1,11 @@
+## 2.0.12
+
+- Regenerated from OpenAPI 2.0.12; new release tag (`v2.0.11` is immutable on GitHub after first publish).
+- Event resource: added `modified_at` (UTC ISO8601). `GET /events` supports `sort_by=updated`.
+
 ## 2.0.11
 
-- Regenerated from OpenAPI 2.0.11.
-- Event resource: added `modified_at` (UTC ISO8601). `GET /events` supports `sort_by=updated`.
+- OpenAPI 2.0.11; Packagist tag may be missing or stale if CI could not re-tag `v2.0.11` — use **2.0.12**.
 
 ## 2.0.10
 
